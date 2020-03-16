@@ -1,0 +1,139 @@
+@import 'style/reset'
+@import 'style/font'
+@import 'style/responsive'
+@import 'style/variables'
+
+$easing-1: cubic-bezier(0.215, 0.61, 0.355, 1)
+
+// Custom styles
+.wtm_section
+    min-height: 90vh
+    @include from($tablet)
+        min-height: 40rem
+        max-height: calc(100vw * 0.8)
+    @include from($desktop)
+        min-height: 45rem
+    @include from($large-desktop)
+        min-height: 63rem
+        max-height: 80rem
+    // @include from($tablet)
+    //     height: 100vh
+    //     @media screen and ( orientation: portrait  )
+    //         max-height: 40rem
+    // @include from($desktop)
+    //     min-height: 40rem
+    // @include from($large-desktop)
+    //     height: 100vh
+    //     max-height: 50rem
+        
+    
+
+.container
+    max-width: 68rem
+    margin: auto
+    @include from($tablet)
+        width: calc(100vw - 4rem)
+    @include from($large-desktop)
+        max-width: calc(75rem + 10vw)
+
+// Force styles
+*
+    // outline: 1px dashed gray
+    // outline-offset: -1px
+body
+    font-family: 'Product Sans'
+    color: $color-text
+ul
+    list-style: none
+    padding: 0
+
+a
+    color: inherit
+
+.button
+    border: 2px solid $color-primary
+    padding: 0.5rem 2rem
+    border-radius: 2rem
+    transition: 0.2s border-color, 0.2s background-color
+
+    &--primary
+        background-color: $color-primary
+        color: white
+
+        &:hover
+            border-color: darken($color-primary, 10)
+
+        &:active
+            background-color: darken($color-primary, 10)
+
+.counter-slide
+    &-enter-active, &-leave-active
+        transition: transform .5s, opacity .5s
+    &-enter
+        opacity: 0
+        transform: translate(-50%, 70%) !important
+    &-leave-to
+        opacity: 0
+        transform: translate(-50%, -70%) scaleY(0.5) !important
+
+.menu-slide
+    &-enter-active, &-leave-active
+        transition: transform .3s, opacity .3s
+        
+    &-enter, &-leave-to
+        opacity: 0
+        transform: translateX(-100%) !important
+
+.fade
+    &-enter-active, &-leave-active
+        transition: opacity .3s
+        
+    &-enter, &-leave-to
+        opacity: 0
+
+.button-rotate
+    &-enter-active, &-leave-active
+        transition: transform .3s, opacity .3s
+        
+    &-enter
+        opacity: 0
+        position: absolute
+        transform: rotate(90deg) !important
+    &-leave-to
+        opacity: 0
+        position: absolute
+        transform: rotate(-90deg) !important
+
+.animate
+  transition: 1s opacity, 1s transform
+  transition-timing-function: $easing-1
+
+ 
+.scroll-slide-up
+  transform: translateY(100%)
+  opacity: 0
+
+ 
+.scroll-slide-up.animate-active
+  transform: translateY(0)
+  opacity: 1
+
+.slide-up-mask
+    &-enter-active, &-leave-active
+        transition: 0.75s transform, 0.75s opacity, 0.75s clip-path
+        transition-timing-function: $easing-1
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+    &-enter, &-leave-to
+        opacity: 0
+        position: absolute
+        transform: translateY(100%) !important
+        clip-path: polygon(0 0, 100% 0, 100% 33%, 0 4%)
+
+.slide-up
+    &-enter-active, &-leave-active
+        transition: 0.5s transform, 0.5s opacity
+        transition-timing-function: $easing-1
+    &-enter, &-leave-to
+        opacity: 0
+        position: absolute
+        transform: translateY(100%) !important

@@ -1,0 +1,38 @@
+$phone: ("min": 0px, "max": 699px) // Phones
+$tablet: ("min": 700px, "max": 1199px) // 1024 screens
+$desktop: ("min": 1200px, "max": 1599px) // Laptop screens
+$large-desktop: ("min": 1600px, "max": 10000px) // HD Screens
+
+@mixin from($breakpoint)
+    @media only screen and (min-width:  map-get($breakpoint, "min"))
+        @content
+
+@mixin to($breakpoint)
+    @media only screen and (max-width:  map-get($breakpoint, "max"))
+        @content
+
+.hide-from-phone
+    @include from($phone)
+        display: none !important
+.hide-from-tablet
+    @include from($tablet)
+        display: none !important
+.hide-from-desktop
+    @include from($desktop)
+        display: none !important
+.hide-from-large-desktop
+    @include from($large-desktop)
+        display: none !important
+
+.hide-to-phone
+    @include to($phone)
+        display: none !important
+.hide-to-tablet
+    @include to($tablet)
+        display: none !important
+.hide-to-desktop
+    @include to($desktop)
+        display: none !important
+.hide-to-large-desktop
+    @include to($large-desktop)
+        display: none !important
