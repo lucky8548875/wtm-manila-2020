@@ -3,7 +3,7 @@
     <div class="artwork-3"></div>
     <div class="container">
         
-        <countdown :time="time">
+        <!-- <countdown :time="time">
             <template slot-scope="props">
                 <div class="timer">
                     <div class="timer-art-1"></div>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </template>
-        </countdown>
+        </countdown> -->
         <div class="WTMAbout__info">
         <header>
             <div class="header-accent">

@@ -18,9 +18,9 @@ Everyone's safety and health is our priority. We hope to still see you in WTM Ma
     <WTMAbout></WTMAbout>
     <br>
     <WTMHighlights></WTMHighlights>
-    <WTMSchedule></WTMSchedule>
+    <!-- <WTMSchedule></WTMSchedule>
     <WTMSpeakers></WTMSpeakers>
-    <WTMFaqs></WTMFaqs>
+    <WTMFaqs></WTMFaqs> -->
     <!-- -->
     
     

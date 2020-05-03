@@ -8,15 +8,15 @@
         <h1 class="WTMSchedule__title">Schedule</h1>
         <br><br>
         <ul>
-            <!--  @click="getSession(item.session_id).speaker_id ? $parent.speakerDialogSync = getSession(item.session_id).speaker_id : ''" -->
-            <!-- :class="getSession(item.session_id).speaker_id ? 'WTMSchedule__item-wrapper--selectable' : ''" -->
+             @click="getSession(item.session_id).speaker_id ? $parent.speakerDialogSync = getSession(item.session_id).speaker_id : ''"
+            :class="getSession(item.session_id).speaker_id ? 'WTMSchedule__item-wrapper--selectable' : ''"
             <li  class="WTMSchedule__item-wrapper" v-for="item in $parent.data.schedule" :key="item.session_id">
-                <!-- [{{item.time}} {{item.period}}]
+                [{{item.time}} {{item.period}}]
                 <br>
                 {{getSession(item.session_id).title}}
                 <br>
                 {{getSession(item.session_id).duration}}
-                {{getSession(item.session_id).speaker_id ? ' / ' + getSpeaker(getSession(item.session_id).speaker_id).name : ""}} -->
+                {{getSession(item.session_id).speaker_id ? ' / ' + getSpeaker(getSession(item.session_id).speaker_id).name : ""}}
                 <div class="WTMSchedule__time-wrapper">
                     <div class="WTMSchedule__time">{{item.time}}</div>
                     <div class="WTMSchedule__period">{{item.period}}</div>

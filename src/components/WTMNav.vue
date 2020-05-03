@@ -15,10 +15,10 @@
                 <!-- Navigation links -->
                 <ul class="WTMNav__links hide-to-phone">
                     <li>
-                <a href="#schedule" class="WTMNav__link">SCHEDULE</a>
+                <!-- <a href="#schedule" class="WTMNav__link">SCHEDULE</a> -->
             </li>
             <li>
-                <a href="#speakers" class="WTMNav__link">SPEAKERS</a>
+                <!-- <a href="#speakers" class="WTMNav__link">SPEAKERS</a> -->
             </li>
                 </ul>
             </div>
